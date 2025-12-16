@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OriRank - Oricon Weekly Manga & Light Novel Sales</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="OriRank Logo" class="logo">
+      <p class="logo-disclaimer">
+        Data sourced from Oricon. For informational purposes only. All rights reserved by Oricon.
+      </p>
+    </header>
+
+
+    <div class="nav-container">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+
+
+      <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">
+        <span class="toggle-icon">🌙</span>
+      </button>
+    </div>
+
+
+    <div class="category-switch">
+      <a href="index.html" class="category-btn active">Manga Rankings</a>
+      <a href="light-novels.html" class="category-btn">Light Novel Rankings</a>
+    </div>
+    <p id="week-info">Loading week...</p>
+
+    <section class="chart-section">
+      <canvas id="salesChart"></canvas>
+    </section>
+
+    <p class="hover-note">
+      Hover over bars to see cover art and details
+    </p>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
