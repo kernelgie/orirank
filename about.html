@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OriRank - About</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OriRank - About</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <img src="images/logo.png" alt="OriRank Logo" class="logo">
-            <p class="logo-disclaimer">
-                Data sourced from Oricon. For informational purposes only. All rights reserved by Oricon.
-            </p>
-        </header>
+  <div class="container">
+    <header>
+      <!-- Header stays as before -->
+    </header>
 
-        <div class="nav-container">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="support.html">Support</a></li>
-                </ul>
-            </nav>
+    <div class="nav-container">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
 
-            <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">
-                <span class="toggle-icon">🌙</span>
-            </button>
-        </div>
-
-        <div class="category-switch">
-            <a href="index.html" class="category-btn">Manga Rankings</a>
-            <a href="light-novels.html" class="category-btn">Light Novel Rankings</a>
-        </div>
-
-        <!-- Content Box instead of chart -->
-        <section class="content-box">
-            <h2>About OriRank</h2>
-            <p>
-                OriRank is a fan-made tracker for Oricon weekly manga and light novel sales in Japan.
-                We provide up-to-date rankings with clean visuals, hover details, and direct Amazon links to support
-                creators.
-            </p>
-            <p>
-                This site is for informational and entertainment purposes only. All sales data is sourced from Oricon
-                public releases.
-            </p>
-            <p>
-                Made with love for the manga and light novel community. Enjoy the weekly drops!
-            </p>
-            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">
-                © 2025 OriRank • Not affiliated with Oricon
-            </p>
-        </section>
-
-        <p class="hover-note">
-            Hover over bars on ranking pages to see cover art and details
-        </p>
+      <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">
+        <span class="toggle-icon">🌙</span>
+      </button>
     </div>
 
-    <script src="js/main.js"></script>
-</body>
+    <div class="category-switch">
+      <a href="index.html" class="category-btn">Manga Rankings</a>
+      <a href="light-novels.html" class="category-btn">Light Novel Rankings</a>
+    </div>
 
+    <!-- Content -->
+    <section class="content-box about-content">
+      <!-- Small logo above the title -->
+      <div class="about-logo-wrapper">
+        <img src="images/logo.png" alt="OriRank Logo" class="about-logo">
+      </div>
+
+      <h2>About OriRank</h2>
+
+      <p class="intro-text">
+        Welcome to <strong>OriRank</strong> — your clean, fast, and beautiful tracker for weekly manga and light novel sales in Japan, powered by official Oricon data.
+      </p>
+
+      <p>
+        Every week, we bring you the latest top 10 rankings with:
+      </p>
+      <ul class="feature-list">
+        <li>Stunning cover art on hover</li>
+        <li>Direct Amazon purchase links</li>
+        <li>Podium spotlight for the top 3</li>
+        <li>Graph and card views</li>
+        <li>Full dark mode support</li>
+      </ul>
+
+      <p>
+        This site is a passion project made for fans, by a fan. No ads, no tracking — just pure, up-to-date sales data presented in a modern way.
+      </p>
+
+      <p>
+        All data is sourced from public Oricon weekly charts. Rankings reflect physical sales in Japan.
+      </p>
+
+      <p class="closing-text">
+        Thank you for visiting — enjoy exploring the weekly battles for the top spot! 👑
+      </p>
+
+      <p class="footer-note">
+        © 2025 OriRank • Unofficial fan site • Not affiliated with Oricon
+      </p>
+    </section>
+
+    <p class="bottom-disclaimer">
+      Data sourced from Oricon. For informational purposes only. All rights reserved by Oricon.
+    </p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
 </html>

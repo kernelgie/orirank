@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OriRank - Oricon Weekly Light Novel Sales</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OriRank - Oricon Weekly Light Novel Sales</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <img src="images/logo.png" alt="OriRank Logo" class="logo">
-            <p class="logo-disclaimer">
-                Data sourced from Oricon. For informational purposes only. All rights reserved by Oricon.
-            </p>
-        </header>
+  <div class="container">
+    <header>
+      <!-- Logo removed -->
+    </header>
 
-        <!-- Navigation Bar with Dark Mode Toggle -->
-        <div class="nav-container">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="support.html">Support</a></li>
-                </ul>
-            </nav>
+    <div class="nav-container">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
 
-            <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">
-                <span class="toggle-icon">🌙</span>
-            </button>
-        </div>
-
-        <!-- Category Switch -->
-        <div class="category-switch">
-            <a href="index.html" class="category-btn">Manga Rankings</a>
-            <a href="light-novels.html" class="category-btn active">Light Novel Rankings</a>
-        </div>
-
-        <p id="week-info">Loading week...</p>
-
-        <section class="chart-section">
-            <canvas id="salesChart"></canvas>
-        </section>
-
-        <p class="hover-note">
-            Hover over bars to see cover art and details
-        </p>
+      <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">
+        <span class="toggle-icon">🌙</span>
+      </button>
     </div>
 
-    <script src="js/light-novel-data.js"></script>
-    <script src="js/chart.js"></script>
-    <script src="js/main.js"></script>
-</body>
+    <div class="category-switch">
+      <a href="index.html" class="category-btn">Manga Rankings</a>
+      <a href="light-novels.html" class="category-btn active">Light Novel Rankings</a>
+    </div>
 
+    <p id="week-info">Loading week...</p>
+
+    <!-- Nice View (default shown) -->
+    <section id="niceView" class="view-section">
+      <div class="top3-spotlight">
+        <!-- Top 3 cards inserted by JS -->
+      </div>
+
+      <div class="nice-rankings-grid">
+        <!-- #4-10 cards inserted by JS -->
+      </div>
+
+      <!-- View Toggle at the bottom -->
+      <div class="view-toggle">
+        <button id="niceViewBtn" class="view-btn active" title="Nice View">
+          <span class="view-icon">🍡</span>
+        </button>
+        <button id="graphViewBtn" class="view-btn" title="Graph View">
+          <span class="view-icon">📈</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Graph View (hidden by default) -->
+    <section id="graphView" class="view-section" style="display: none;">
+      <div class="chart-section">
+        <canvas id="salesChart"></canvas>
+      </div>
+
+      <!-- View Toggle at the bottom -->
+      <div class="view-toggle">
+        <button id="niceViewBtn" class="view-btn" title="Nice View">
+          <span class="view-icon">🍡</span>
+        </button>
+        <button id="graphViewBtn" class="view-btn active" title="Graph View">
+          <span class="view-icon">📈</span>
+        </button>
+      </div>
+
+      <p class="hover-note">
+        Hover over bars to see cover art and details
+      </p>
+    </section>
+
+    <!-- Disclaimer at the very bottom -->
+    <p class="bottom-disclaimer">
+      Data sourced from Oricon. For informational purposes only. All rights reserved by Oricon.
+    </p>
+  </div>
+
+  <script src="js/light-novel-data.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
